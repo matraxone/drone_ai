@@ -1,0 +1,115 @@
+Software Design Document (SDR) - Drone AI Project
+
+---
+
+Project: AI-Powered Drone for Object and Person Recognition
+
+Objective:
+Design, build, and program a drone capable of recognizing objects and people using AI, with automated flight control and obstacle avoidance.
+
+Hardware Components:
+
+* 4 x Brushless Motors (A2208)
+* 4 x Propellers (10x3)
+* 4 x ESC (Electronic Speed Controllers)
+* Flight Controller (AERO SELFIE H743)
+* Gyroscope/Accelerometer (MPU6050)
+* Raspberry Pi 5 (4GB)
+* Camera Module (compatible with Raspberry Pi)
+* LiPo Battery 11.1V 3S
+* GPS Module
+* RC Transmitter + Receiver
+* Power Distribution Board (PDB)
+* Battery Charger
+* XT60 Connectors
+
+Software Requirements:
+
+* Programming Language: Python
+* Object Detection: YOLOv8 or YOLOv5
+* AI/ML Frameworks: PyTorch, OpenCV
+* Raspberry Pi OS or compatible Linux
+* SDR Libraries:
+
+  * numpy
+  * opencv-python
+  * torch
+  * torchvision
+  * pillow
+  * scikit-learn
+  * imutils
+* Windows Setup: Python 3.11, pip, virtualenv
+* Raspberry Pi Setup: Python 3.11, pip, Raspbian OS, camera support enabled
+
+Functional Requirements:
+
+1. Initialize all drone hardware components.
+2. Read input from gyroscope, accelerometer, GPS, and camera.
+3. Implement PID flight control using the flight controller.
+4. Use YOLO for real-time object and person detection.
+5. Control motors through ESCs based on flight controller output.
+6. Enable obstacle avoidance with ultrasonic sensors.
+7. Log telemetry data to Raspberry Pi for analysis.
+8. Provide remote control functionality via RC transmitter.
+9. Autonomous flight mode with predefined waypoints (GPS).
+
+Development Environment:
+
+* Windows 11 / Linux (Raspberry Pi)
+* Python 3.11
+* GitHub repository for version control
+* VS Code or PyCharm for coding
+
+Project Structure:
+/drone_project
+/hardware
+motor_control.py
+sensors.py
+flight_controller.py
+camera.py
+/software
+object_detection.py
+ai_model.py
+obstacle_avoidance.py
+/docs
+SDR.txt
+requirements.txt
+
+Requirements File (requirements.txt):
+numpy
+opencv-python
+torch
+torchvision
+pillow
+scikit-learn
+imutils
+
+Testing:
+
+* Unit test for each hardware module.
+* Integration test for flight control and AI detection.
+* Field test with all components integrated.
+* Logging and error handling verification.
+
+Deployment:
+
+* Load software onto Raspberry Pi 5.
+* Connect all hardware components.
+* Calibrate sensors and flight controller.
+* Test AI detection and autonomous flight in safe environment.
+
+Security:
+
+* Use secure Wi-Fi or RC link.
+* Limit camera access to authorized users.
+* Ensure battery safety and proper charging protocols.
+
+Maintenance:
+
+* Regular firmware updates for flight controller.
+* Software updates for AI models.
+* Check battery health and connectors periodically.
+
+End of SDR.
+
+

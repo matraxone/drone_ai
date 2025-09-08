@@ -6,3 +6,8 @@ onnx==1.16.0
 onnxruntime==1.17.1
 pyserial==3.5
 pymavlink==2.4.41
+torch
+torchvision
+pillow
+scikit-learn
+imutils
